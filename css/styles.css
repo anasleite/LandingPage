@@ -1,0 +1,436 @@
+/*
+ *
+ * CSS written based on SMACSS architecture.
+ * To learn more, visit: http://smacss.com/
+ * 
+ * For simplicity, no reset or normalize is added. 
+ * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
+ *
+*/
+
+
+/* ---- Base Rules ---- */
+body {
+    background: white;
+    background: linear-gradient(0deg, #9B7989, white);
+    margin: 0;
+    font-family: calibri;
+    color: #fff;
+}
+
+
+
+#section0 img {
+      
+  background-size:cover;
+  max-width: 100%;
+  
+}
+
+.container {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media only screen and (min-width: 1592px){
+  .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+}
+
+
+
+.content{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    padding-top: 120px
+  }
+
+.content1{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+
+  #photo1{
+    width: 100%;
+    display: block;
+  
+  }
+
+  
+  #photo1{
+      width: 100%;
+      display: block;
+    
+    }
+
+  #photo2{
+      width: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    
+    }
+
+
+
+  /* CONTACT FORM */
+
+  .contactform{
+    padding: 20px;
+  }
+
+  input[type=text], input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 4px;
+    font-family: calibri;
+    color: white;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  textarea{
+    height:200px;
+  }
+  
+  input[type=submit] {
+    background-color: #4e323f;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: calibri;
+  }
+  
+  input[type=submit]:hover {
+    background-color: white;
+    color: #4e323f;
+    text-decoration:solid;
+  }
+  
+
+
+
+
+/* Typeography General*/
+
+h2 {
+    border-bottom: 1px solid white;
+    font-size: 3em;
+    color: #fff;
+}
+
+p {
+    line-height: 1.6em;
+    color: #eee;
+    font-family: calibri;
+}
+
+
+
+/* ---- Layout Rules ---- */
+
+section {
+    position: relative;
+    min-height: 10vh;
+    border: rgba(255, 255, 255, 0) 0.1px solid;
+}
+
+
+/* ---- Module Rules ---- */
+
+/* Navigation Styles*/
+
+
+#navbar__list {
+    display: flex;
+    padding: 20px;
+    padding-right: 80px;
+    margin: 0px;
+    text-align: right;
+    color: white;
+    
+}
+
+
+.navbar__menu .menu__link {
+  display:block;
+  padding: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: calibri;
+  font-size: 10px;
+  color: #9B7989;
+  
+}
+
+
+
+@media only screen and (min-width: 920px){
+  .navbar__menu .menu__link {
+      display: block;
+      padding: 1em;
+      font-weight: bold;
+      text-decoration: none;
+      font-family: calibri;
+      font-size: 18px;
+      color: #9B7989;
+      
+  }
+}
+
+.navbar__menu .menu__link:hover {
+    background: #9B7989;
+    transition: ease 0.3s all;
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.navbar__menu .active-link {
+  background: #9B7989;
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  transition: ease 0.3s all;
+}
+
+
+.menu__link a {
+    text-decoration: none;
+    color: #9B7989;
+}
+
+.menu__link a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Header Styles */
+.page__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(255,255,255, 0.9);
+    position: fixed;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.09);
+    top: 0;
+    width: 100%;
+    z-index: 5;
+
+  }
+
+  header {
+    position: relative;
+    z-index: 70;
+  }
+  
+
+
+  .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 0%;
+    
+  }
+  
+  .logo img {
+    width: 0%;
+    margin-left: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+
+
+  @media only screen and (min-width: 920px){
+    .logo {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      width: 15%;
+      
+    }
+
+  
+    .logo img {
+      width: 100%;
+      margin-left: 80px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+  }
+
+
+/* Footer Styles */
+.footerbox{
+    background-color: #a8a8a8;
+    grid-area: bottom bottom;
+    height: 100px;
+    padding: 20px;
+    margin-top: 10px;
+    grid-area: ft;
+      
+  }
+  
+  .socialbox{
+    width: 60px;
+    height: 30px;
+    text-align: center;
+  }
+  
+  .socialmedia{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    text-justify: auto;
+    margin-top: 20px;
+    
+  }
+  
+  #direitos{
+    color: white;
+    font-family: Calibri;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .direitos{
+    display: block;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  
+
+
+/* ---- Theme Rules ---- */
+/* Landing Container Styles */
+.landing__container {
+    padding: 1em;
+    text-align: left;
+    margin-top: 120px;
+
+}
+
+@media only screen and (min-width: 1592px){
+    .landing__container {
+        max-width: 50em;
+        padding: 4em;
+    }
+}
+
+section:nth-of-type(even) .landing__container {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right; 
+}
+
+/* Background Circles */
+/* Note that background circles are created with psuedo elements before and after */
+/* Circles appear to be random do to use of :nth-of-type psuedo class */
+section:nth-of-type(odd) .landing__container::before {
+    content: '';
+    background: rgba(255, 255, 255, 0.187);
+    position: absolute;
+    z-index: -5;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(even) .landing__container::before {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    top: 3em;
+    right: 3em;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n) .landing__container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n + 1) .landing__container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    right: 20vw;
+    bottom: -5em;
+    z-index: -5;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+
+/* ---- Theme State Rules ---- */
+/* Section Active Styles */
+
+section.your-active-class {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+section.your-active-class .landing__container::before {
+    opacity: 1;
+    animation: rotate 4s linear 0s infinite forwards;
+}
+
+section.your-active-class .landing__container::after {
+    opacity: 1;
+    animation: rotate 5s linear 0s infinite forwards reverse;
+}
+
+/* Section Active Styles Keyframe Animations */
+@keyframes rotate {
+	from {
+		transform: rotate(0deg)
+		           translate(-1em)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-1em) 
+		           rotate(-360deg);
+	}
+}
