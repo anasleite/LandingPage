@@ -1,4 +1,5 @@
 
+
 /**
  * 
  * Manipulating the DOM exercise.
@@ -14,10 +15,6 @@
  * 
 */
 
-/**
- * Comments should be present at the beginning of each procedure and class.
- * Great to have comments before crucial code sections within the procedure.
-*/
 
 // build the nav
 const navBar = document.querySelector('#navbar__list');
@@ -30,12 +27,17 @@ for(section of sections){ //For loop to create <li>, <a href> in every sections 
   const listA = document.createElement('a'); //create the <a> element
   listA.setAttribute("href", "#" + section.id); //define the 'href' attribute for each <a> element
   listLi.setAttribute("class", "menu__link"); //define the class attribute for each <li> element
+  
+  //ADD THIS LINE FOR ACTIVE CLASS ON LINKS WORK AND SMOOTH SCROLL FUNCTION STOP WORKING
+  listLi.setAttribute("id", section.id); 
+  
   navBar.appendChild(listLi); //append the <li> element to the <ul>
   listLi.append(listA); //append the <a> element to the <li>
   var navLink = document.createTextNode(section.dataset.nav); //write the text of the link with the name of data-nav attribute of each section
   listA.appendChild(navLink); //append the text node to the a item
 
 }
+
 
 
 // Scroll to anchor ID using scrollIntoView event
@@ -51,29 +53,30 @@ for (const a of navLinks) { //for loop for every time that I click on a link of 
   })
 }
  
+ 
 
 // Add class 'active' to section when near top of viewport
 // Make sections active
 document.addEventListener('scroll', function ActiveState (){ //add an event on scroll for
   for (const section of sections) {
     const sectionInViewport = section.getBoundingClientRect();
-  
     if (sectionInViewport.top <= 200 && sectionInViewport.bottom >= 200) { 
       // Apply active state on the current section and the corresponding Nav link. - Reference: https://knowledge.udacity.com/questions/66312#66326
 
-      section.classList.add("your-active-class");
-      const sectionId = document.getElementById(`${section.id}`); //this is not working
-      sectionId.classList.add("active");//this is not working
+        section.classList.add("your-active-class");
+        const sectionId = document.getElementById(`${section.id}`);
+        sectionId.classList.add("active");
+        
 
     } else {
-      section.classList.remove("your-active-class");
-      const sectionId = document.getElementById(`${section.id}`);//this is not working
-      sectionId.classList.remove("active")//this is not working
+        section.classList.remove("your-active-class");
+        const sectionId = document.getElementById(`${section.id}`);
+        sectionId.classList.remove("active");
+      
       }
     }
   });
 
 
-
-
+  
  
