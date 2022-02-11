@@ -200,9 +200,9 @@ section {
     text-decoration: none;
 }
 
-.navbar__menu .active-link {
-  background: #9B7989;
-  color: rgb(255, 255, 255);
+.navbar__menu .active {
+  background: #dfcad3;
+  color: white;
   border-radius: 8px;
   transition: ease 0.3s all;
 }
