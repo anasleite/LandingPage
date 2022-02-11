@@ -62,13 +62,13 @@ document.addEventListener('scroll', function ActiveState (){ //add an event on s
       // Apply active state on the current section and the corresponding Nav link. - Reference: https://knowledge.udacity.com/questions/66312#66326
 
       section.classList.add("your-active-class");
-      const sectionId = document.getElementById(`${section.id}`);
-      sectionId.classList.add("active");
+      const sectionId = document.getElementById(`${section.id}`); //this is not working
+      sectionId.classList.add("active");//this is not working
 
     } else {
       section.classList.remove("your-active-class");
-      const sectionId = document.getElementById(`${section.id}`);
-      sectionId.classList.remove("active")
+      const sectionId = document.getElementById(`${section.id}`);//this is not working
+      sectionId.classList.remove("active")//this is not working
       }
     }
   });
