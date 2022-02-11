@@ -28,7 +28,7 @@ for(section of sections){ //For loop to create <li>, <a href> in every sections 
   listA.setAttribute("href", "#" + section.id); //define the 'href' attribute for each <a> element
   listLi.setAttribute("class", "menu__link"); //define the class attribute for each <li> element
   
-  //ADD THIS LINE FOR ACTIVE CLASS ON LINKS WORK AND SMOOTH SCROLL FUNCTION STOP WORKING
+  //ADDED THIS LINE FOR ACTIVE CLASS ON LINKS WORK AND SMOOTH SCROLL FUNCTION STOP WORKING
   listLi.setAttribute("id", section.id); 
   
   navBar.appendChild(listLi); //append the <li> element to the <ul>
