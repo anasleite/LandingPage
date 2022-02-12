@@ -157,7 +157,7 @@ section {
 
 #navbar__list {
     display: flex;
-    padding: 20px;
+    padding: 1em;
     padding-right: 80px;
     margin: 0px;
     text-align: right;
@@ -168,7 +168,7 @@ section {
 
 .navbar__menu .menu__link {
   display:block;
-  padding: 5px;
+  padding: 1em;
   font-weight: bold;
   text-decoration: none;
   font-family: calibri;
@@ -193,18 +193,19 @@ section {
 }
 
 .navbar__menu .menu__link:hover {
-    background: #9B7989;
+    background: #c5a1b2;
     transition: ease 0.3s all;
     color: rgb(255, 255, 255);
     border-radius: 8px;
-    text-decoration: none;
+    padding: 1em;
 }
 
 .navbar__menu .active {
-  background: #dfcad3;
-  color: white;
-  border-radius: 8px;
-  transition: ease 0.3s all;
+  background: #c5a1b2;
+    transition: ease 0.3s all;
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 1em;
 }
 
 
@@ -212,6 +213,8 @@ section {
     text-decoration: none;
     color: #9B7989;
 }
+
+
 
 .menu__link a:hover {
     text-decoration: none;
